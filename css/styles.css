@@ -1361,6 +1361,8 @@ section {
 }
 .mobile-menu-socials {
   display: flex;
-
   gap: 56px;
+}
+.mobile-social-item{
+  
 }
