@@ -110,7 +110,8 @@ section {
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-  }
+    padding-left: 15px;
+    padding-right: 15px;  }
 }
 .list {
   margin: 0;
@@ -1151,10 +1152,16 @@ section {
   }
 }
 
-
+@media only screen and (max-width: 767px) {
+  .footer-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
 .footer-logo {
-  display: inline-block;
-  margin: 0 auto;
+  display: block;
+  
   margin-bottom: 16px;
 }
 .footer-text {
@@ -1299,7 +1306,7 @@ section {
 .menu-container {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   padding: 80px 40px 40px;
