@@ -1114,17 +1114,22 @@ section {
 }
 .footer > .container {
   display: flex;
+  width: 396px;
   flex-direction: column;
   gap: 72px;
 }
 @media only screen and (min-width: 768px) {
   .footer > .container{
+    width: 736px;
+    gap: 72px 24px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 @media only screen and (min-width: 1158px) {
   .footer > .container{
+    gap: 0;
+    width: 1158px;
     flex-wrap: nowrap;
   }
 }
@@ -1182,6 +1187,7 @@ section {
 .footer-social-media-logo:focus {
   background-color: #31d0aa;
 }
+
 @media only screen and (min-width: 1158px) {
   .footer-sub-conteiner {
     margin-left: auto;
@@ -1190,12 +1196,19 @@ section {
 
 .sub-menu {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .sub-menu {
+    flex-direction: row ;
+    gap: 24px;
+  }
 }
 .sub-text-input {
   display: block;
-  width: 264px;
   height: 40px;
+  width: 100%;
   border: 1px solid #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -1203,6 +1216,11 @@ section {
   color: #ffffff;
   padding-left: 16px;
   transition: border 250ms var(--primary-cubic-bezier);
+}
+@media only screen and (min-width: 768px) {
+  .sub-text-input {
+    width: 264px;    
+  }
 }
 .sub-text-input:focus {
   border: 1px solid var(--primaty-brand-color);
@@ -1215,9 +1233,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 165px;
   height: 40px;
   padding: 8px 24px;
   gap: 16px;
+  margin-right: auto;
+  margin-left: auto;
   background: #4d5ae5;
   font-family: inherit;
   border-radius: 4px;
