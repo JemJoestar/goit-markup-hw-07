@@ -864,14 +864,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 24px;
+  gap: 72px;
   align-content: center;
   margin: 0;
   padding: 0;
 }
 @media only screen and (min-width: 768px) {
   .our-team-list {
-    row-gap: 72px;
+    column-gap: 24px;
     flex-direction: row;
     justify-content: center;
   }
