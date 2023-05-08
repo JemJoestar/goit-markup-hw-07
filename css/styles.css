@@ -10,7 +10,6 @@ html {
 ::after {
   box-sizing: inherit;
 }
-
 :root {
   --primaty-brand-color: #4d5ae5;
   --secondary-brand-color: #404bbf;
@@ -20,6 +19,15 @@ html {
   --secondary-bg-color: #f4f4fd;
   --customer-icon-color: #8e8f99;
   --primary-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-gradient: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  );
+}
+img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .visually-hidden {
   position: absolute;
@@ -104,7 +112,7 @@ section {
 
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -415,16 +423,42 @@ section {
   /* text-align: center; */
   background-color: var(--main-title-color);
   padding: 112px 0;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/hero-photo.jpg);
+  /* background-image: var(--hero-gradient),
+    url(../images/hero/hero-photo.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
+@media only screen and (max-width: 427px) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero/img_mob@1x.jpg) ;    
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--hero-gradient), url(../images/hero/img_mob@2x.jpg) ; 
+    }
+  }
+}
+@media only screen and (min-width: 428px) and (max-width: 767px) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero/img_tab@1x.jpg) ;    
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--hero-gradient), url(../images/hero/img_tab@2x.jpg) ; 
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image:var(--hero-gradient), url(../images/hero/img_desk@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image:var(--hero-gradient), url(../images/hero/img_desk@2x.jpg);
+    }
+  }
+}
 @media only screen and (min-width: 1158px) {
   .hero {
     max-width: 1440px;
@@ -544,6 +578,11 @@ section {
   border-radius: 4px;
   transform: translate(-50%, -50%) rotateY(0);
   transition: transform 250ms var(--primary-cubic-bezier) 100ms;
+}
+@media only screen and (max-width: 427px) {
+  .modal-frame {
+      width: 90%;   
+  }
 }
 @media only screen and (min-width: 768px) {
   .modal-frame {
@@ -863,16 +902,17 @@ section {
 .our-team-list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 72px;
   align-content: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 @media only screen and (min-width: 768px) {
   .our-team-list {
     column-gap: 24px;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
   }
 }
@@ -995,9 +1035,15 @@ section {
 .portfolio-filters {
   display: flex;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 72px;
   gap: 24px;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-filters {
+    justify-content: center;
+  }
 }
 
 .portfolio-filter-button {
@@ -1037,7 +1083,6 @@ section {
 }
 .portfolio-items {
   box-sizing: border-box;
-  width: 360px;
   padding-bottom: 32px;
   background: var(--primary-bg-color);
 }
@@ -1085,7 +1130,6 @@ section {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-left: 16px;
   margin-bottom: 8px;
   color: var(--main-title-color);
 }
@@ -1096,7 +1140,6 @@ section {
   border-top: none;
 }
 .portfolio-items-text {
-  margin-left: 16px;
   color: var(--main-text-color);
 }
 /**
@@ -1307,8 +1350,8 @@ section {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 80px 40px 40px;
   background-color: var(--primary-bg-color);
   z-index: 999;
@@ -1372,4 +1415,12 @@ section {
 }
 .mobile-social-item{
   
+}
+.class{
+  display:none;
+}
+@media only screen and (min-width: 1158px) {
+  .class {
+    display: block;
+  }
 }

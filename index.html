@@ -65,14 +65,14 @@
             </li>
           </ul>
         </address>
-        <button class="menu-btn menu-toggle js-open-menu" type="button" >
+        <button class="menu-btn menu-toggle js-open-menu" type="button">
           <svg class="menu-btn-icon" width="32" height="22">
             <use href="./images/icon.svg#icon-menu-btn"></use>
           </svg>
         </button>
       </div>
     </header>
-    <main style="display: flex; flex-direction: column;">
+    <main style="display: flex; flex-direction: column">
       <!-- /**
       * |============================
       * | Hero
@@ -151,30 +151,46 @@
       * | We-doing
       * |============================
       */ -->
+
       <section class="we-doing">
         <div class="container">
           <h2 class="secondry-title">What are we doing</h2>
           <ul class="we-doing-list list">
             <li class="we-doing-list-item">
-              <img
-                src="./images/gajets/phone_photo.jpg"
-                alt="photo"
-                width="360"
-              />
+                <img
+                  src="./images/gajets/phone_photo.jpg"
+                  srcset="
+                  ./images/we-doing/img-1_desk@1x.jpg 360w,
+                  ./images/we-doing/img-1_desk@2x.jpg 720w"
+                  sizes="(min-width: 1158px) 360px"
+                  alt="photo"
+                  width="360"
+                  loading="lazy"
+                />
             </li>
             <li class="we-doing-list-item">
-              <img
-                src="./images/gajets/mac_photo.jpg"
-                alt="photo"
-                width="360"
-              />
+                <img
+                  src="./images/gajets/mac_photo.jpg"
+                  srcset="
+                    ./images/we-doing/img-2_desk@1x.jpg 360w,
+                    ./images/we-doing/img-2_desk@2x.jpg 720w"
+                  sizes="(min-width: 1158px) 360px"
+                  alt="photo"
+                  width="360"
+                  loading="lazy"
+                />
             </li>
             <li class="we-doing-list-item">
-              <img
-                src="./images/gajets/mac_phone_photo.jpg"
-                alt="photo"
-                width="360"
-              />
+                <img
+                  src="./images/gajets/mac_phone_photo.jpg"
+                  srcset="
+                  ./images/we-doing/img-3_desk@1x.jpg 360w,
+                  ./images/we-doing/img-3_desk@2x.jpg 720w"
+                  sizes="(min-width: 1158px) 360px"
+                  alt="photo"
+                  width="360"
+                  loading="lazy"
+                />
             </li>
           </ul>
         </div>
@@ -189,12 +205,21 @@
           <h2 class="secondry-title our-team-title">Our Team</h2>
           <ul class="our-team-list list">
             <li class="our-team-item">
-              <img
-                src="./images/employee/mark.jpg"
-                alt="Mark Guerrero"
-                width="264"
-                class="our-team-item-photo"
-              />
+              <picture>
+                
+                <source
+                media="All"
+                srcset="./images/team/img-1_mob@1x.jpg 1x,
+                ./images/team/img-1_mob@2x.jpg 2x">
+                <img
+                  src=""
+                  
+                  alt="Mark Guerrero"
+                  width="264"
+                  class="our-team-item-photo"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-info">
                 <h3 class="names">Mark Guerrero</h3>
                 <p class="our-team-text">Product Designer</p>
@@ -233,9 +258,14 @@
             <li class="our-team-item">
               <img
                 src="./images/employee/tom.jpg"
+                srcset=" 
+                ./images/team/img-2_mob@1x.jpg 1x,
+                ./images/team/img-2_mob@2x.jpg 2x 
+                "
                 alt="Tom Ford"
                 width="264"
                 class="our-team-item-photo"
+                loading="lazy"
               />
               <div class="team-info">
                 <h3 class="names">Tom Ford</h3>
@@ -275,9 +305,14 @@
             <li class="our-team-item">
               <img
                 src="./images/employee/camila.jpg"
+                srcset=" 
+                ./images/team/img-3_mob@1x.jpg 1x,
+                ./images/team/img-3_mob@2x.jpg 2x 
+                "
                 alt="Camila Garcia"
                 width="264"
                 class="our-team-item-photo"
+                loading="lazy"
               />
               <div class="team-info">
                 <h3 class="names">Camila Garcia</h3>
@@ -317,9 +352,14 @@
             <li class="our-team-item">
               <img
                 src="./images/employee/daniel.jpg"
+                srcset=" 
+                ./images/team/img-4_mob@1x.jpg 1x,
+                ./images/team/img-4_mob@2x.jpg 2x 
+                "
                 alt="Daniel Wilson"
                 width="264"
                 class="our-team-item-photo"
+                loading="lazy"
               />
               <div class="team-info">
                 <h3 class="names">Daniel Wilson</h3>
@@ -565,10 +605,14 @@
                   name="form_privacy"
                   id="modal-form-privacy"
                 />
-                <span class="modal-checked" ></span>
+                <span class="modal-checked"></span>
                 <span class="modal-privacy-conditions"
                   >I accept the terms and conditions of the
-                  <a class="privacy-text" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D">Privacy Policy</a></span
+                  <a
+                    class="privacy-text"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                    >Privacy Policy</a
+                  ></span
                 >
               </label>
             </div>
@@ -593,17 +637,31 @@
       </button>
       <!-- ^links -->
       <ul class="mobile-menu">
-        <li><a href="./index.html" class="mobile-menu-link link current">Studio</a></li>
-        <li><a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a></li>
-        <li><a href="" class="mobile-menu-link link ">Contacts</a></li>
+        <li>
+          <a href="./index.html" class="mobile-menu-link link current"
+            >Studio</a
+          >
+        </li>
+        <li>
+          <a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a>
+        </li>
+        <li><a href="" class="mobile-menu-link link">Contacts</a></li>
       </ul>
       <!-- ^ contacts -->
       <ul class="mobile-menu-contacts list">
-        <li class="mobie-contacts"><a href="tel:+110001111111" class="mobile-contacts-phone link">+11 (000) 111-11-11</a></li>
-        <li class="mobie-contacts"><a href="mailto:info@devstudio.com" class="mobile-contacts-email link">info@devstudio.com</a></li>
+        <li class="mobie-contacts">
+          <a href="tel:+110001111111" class="mobile-contacts-phone link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="mobie-contacts">
+          <a href="mailto:info@devstudio.com" class="mobile-contacts-email link"
+            >info@devstudio.com</a
+          >
+        </li>
       </ul>
       <!-- ^Socials -->
-      <ul class=" footer-social-media-list mobile-menu-socials list">
+      <ul class="footer-social-media-list mobile-menu-socials list">
         <li class="social-media-item mobile-social-item">
           <a href="" class="footer-social-media-logo social-media-logo"
             ><svg class="social-media-icons" width="24" height="24">
@@ -638,11 +696,11 @@
     <script src="./js/modal.js"></script>
     <!-- ~ Mobile menu js -->
     <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-  ></script>
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
     <!-- ~ AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
