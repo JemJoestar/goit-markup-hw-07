@@ -1250,10 +1250,9 @@ section {
   font-size: 16px;
   line-height: 1.5;
   padding: 100px 0;
-  display: flex;
 }
 .footer > .container {
-  width: 398px;
+  max-width: 398px;
   display: flex;
   flex-direction: column;
   gap: 72px;
@@ -1261,7 +1260,7 @@ section {
 
 @media only screen and (min-width: 768px) {
   .footer > .container {
-    width: 552px;
+    max-width: 552px;
     gap: 72px 24px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1270,7 +1269,7 @@ section {
 @media only screen and (min-width: 1158px) {
   .footer > .container {
     gap: 0;
-    width: 1158px;
+    max-width: 1158px;
     flex-wrap: nowrap;
   }
 }
@@ -1278,8 +1277,8 @@ section {
   width: 264px;
   padding: 0;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 @media only screen and (min-width: 768px) {
   .footer-container {
